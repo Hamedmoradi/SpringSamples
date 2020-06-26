@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="testA" class="springCore.dependsOnAttribute.A" depends-on="testB"/>
+    <bean id="testB" class="springCore.dependsOnAttribute.B" depends-on="testC"/>
+    <bean id="testC" class="springCore.dependsOnAttribute.C"/>
+    <bean id="testInitA" class="springCore.dependsOnAttribute.A"/>
+    <bean id="testInitB" class="springCore.dependsOnAttribute.B" lazy-init="true"/>
+
+
+</beans>
+
