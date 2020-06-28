@@ -1,0 +1,44 @@
+no autowire means dependency injection will not be achieved using @Autowired annotation, it will be achieved using ref attribute.
+ "default" autowiring is "no". But when the bean is nested bean, then the default autowiring is parent bean autowiring.
+ In case of "no" autowiring settings if we want to use @Autowired in Employee class, use the following tag in XML configuration.
+ <context:annotation-config/>
+ -----------------------------------------------------------------------------------------------------------------------
+
+ default-autowire is used at parent <beans> tag level. Using default-autowire we change the default autowire of bean in
+  our XML configuration. We can change the default autowire of a particular bean by using autowire attribute
+  at bean tag level.
+
+spring-config.xml
+
+
+  <?xml version="1.0" encoding="UTF-8"?>
+  <beans xmlns="http://www.springframework.org/schema/beans"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans.xsd" default-autowire="byType">
+
+      <bean name="address"  class="com.concretepage.bean.Address" autowire="byName">
+      	<property name="city" value="Varanasi"/>
+      	<property name="state" value="Uttar Pradesh"/>
+      </bean>
+      <bean name="employee" class="com.concretepage.bean.Employee">
+  	<property name="empName" value="Manohar Parikar"/>
+      </bean>
+  </beans>
+
+
+  In the above XML file, parent <beans> tag is using default-autowire="byType". So all the child <bean> tag has default
+   autowiring byType. The address bean is using autowire="byName", so its autowiring type is byName and employee bean
+   autowiring type is byType as default.
+
+   ---------------------------------------------------------------------------------------------------------------------
+    In spring framework, dependency injection of bean can be achieved automatically by using @Autowired annotation.
+     We can use @Autowired annotation on field, setter method or constructor. In this case, the required bean for
+     dependency injection is searched by spring container. If more than one bean is eligible for autowiring, the
+     error will be thrown. We can avoid such situation by using @Primary annotation on one bean out of all eligible
+     beans. @Autowired looks for a bean to achieve dependency injection and if it does not find any suitable bean,
+     it throws error. This is the default behavior of it. We can change this behavior by using
+     @Autowired(required=false). To identify @Autowired annotation, we can use AutowiredAnnotationBeanPostProcessor
+     class as bean in XML. If we are using context:annotation-config or context:component-scan tag in XML that will
+     also identify @Autowired annotation. In java configuration, @ComponentScan will also identify the
+      @Autowired annotation.
