@@ -4,15 +4,15 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean name="address" class="springCore.applicationContextAware.byname.Address">
+    <bean name="address" class="springCore.autoWiring.byname.Address">
         <property name="city" value="Varanasi"/>
         <property name="state" value="Uttar Pradesh"/>
     </bean>
-    <bean name="address2" class="springCore.applicationContextAware.byname.Address">
+    <bean name="address2" class="springCore.autoWiring.byname.Address">
         <property name="city" value="Bhopal"/>
         <property name="state" value="Madhya Pradesh"/>
     </bean>
-    <bean name="employee" class="springCore.applicationContextAware.byname.Employee" autowire="byName">
+    <bean name="employee" class="springCore.autoWiring.byname.Employee" autowire="byName">
         <property name="empName" value="Manohar Parikar"/>
     </bean>
 </beans>

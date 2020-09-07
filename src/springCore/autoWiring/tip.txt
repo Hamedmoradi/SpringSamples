@@ -1,3 +1,9 @@
+byName : Spring container looks for bean name same as property name of the class for autowiring.
+byType : Spring container selects the bean by class type for autowiring.
+constructor : Spring container uses constructor based autowiring.
+no : No Autowiring. Use ref attribute to resolve dependency.
+default : The default autowiring is "no". Default autowiring will inherit parent bean autowiring if nested.
+
 no autowire means dependency injection will not be achieved using @Autowired annotation, it will be achieved using ref attribute.
  "default" autowiring is "no". But when the bean is nested bean, then the default autowiring is parent bean autowiring.
  In case of "no" autowiring settings if we want to use @Autowired in Employee class, use the following tag in XML configuration.

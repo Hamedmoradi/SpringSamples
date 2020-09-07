@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 
 /*
 The class field can also be autowired using @Autowired annotation. Any number of fields can be autowired within a class.
-The fields which are autowired should not be public. Find the example.
+The fields which are autowired should not be public.
 */
 @Service
 public class EmployeeService {

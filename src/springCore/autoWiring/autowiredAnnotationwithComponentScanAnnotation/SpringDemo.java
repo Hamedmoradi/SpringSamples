@@ -1,4 +1,4 @@
-package springCore.autoWiring.autowiredAnnotationwithComponentScanAnnotation;
+package springCore.autoWiring.autowiredAnnotationWithComponentScanAnnotation;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

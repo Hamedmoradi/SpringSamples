@@ -1,11 +1,10 @@
 package springCore.autoWiring.byConstructor;
 
-import org.springframework.beans.factory.annotation.Autowired;
 
 public class Employee {
 private String empName;
 private Address address;
-@Autowired
+
 public Employee (Address address, String empName) {
 	this.address = address;
 	this.empName = empName;

@@ -5,7 +5,9 @@ import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 
-/*constructor autowiring is the analogous to byType autowiring. In case of constructor autowiring, spring container fulfills constructor argument autowiring only.
+/*
+constructor autowiring is the analogous to byType autowiring.
+In case of constructor autowiring, spring container fulfills constructor argument autowiring only.
 1. If in spring container, only one bean of autowiring candidate for constructor argument is present, constructor based dependency is performed.
 2. If there is more than one bean of same class type, autowiring will not be performed and fatal error is thrown.
 3. If there is no bean of required class type for constructor autowiring, error is thrown.

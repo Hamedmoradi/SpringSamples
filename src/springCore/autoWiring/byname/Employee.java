@@ -1,10 +1,8 @@
 package springCore.autoWiring.byname;
 
-import org.springframework.beans.factory.annotation.Autowired;
 
 public class Employee {
 private String empName;
-@Autowired
 private Address address;
 public String getEmpName() {
 	return empName;

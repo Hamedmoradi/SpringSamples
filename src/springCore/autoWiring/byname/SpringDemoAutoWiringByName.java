@@ -16,7 +16,8 @@ Find the XML configuration file where we are defining the beans for autowiring.*
 /*In our XML configuration file, we have created two beans with name address and address2 which is using same Address
 class but has been initialized with different property values. In our Employee class, the property name for Address
 class is address. The bean employee has been defined as autowire="byName". So the autowiring in Employee class,
-will be performed using address bean. Find the Address class used in our example.*/
+will be performed using address bean.
+In case container does not find any matching bean by name for autowiring, it will not through any error.*/
 
 public class SpringDemoAutoWiringByName {
 public static void main(String[] args) {

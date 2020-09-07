@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address" class="springCore.beanScopes.prototype.Address" scope="prototype">
+      <constructor-arg name="city" value="Varanasi"/>
+     </bean> 
+    <bean id="teacher" class="springCore.beanScopes.prototype.Teacher">
+      <property name="teachAddress" ref="address"/>
+    </bean>
+    <bean id="student" class="springCore.beanScopes.prototype.Student">
+      <property name="stAddress" ref="address"/>
+    </bean>
+</beans>
+
+
