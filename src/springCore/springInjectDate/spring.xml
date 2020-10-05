@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    <bean id="person" class="springCore.springInjectDate.Person">
+      <property name="name" value="Ram" />
+      <property name="dob" value="01-03-1980" />
+    </bean>
+
+    <bean id="dtEditor" class="org.springframework.beans.propertyeditors.CustomDateEditor">
+		<constructor-arg ref="sdtformat"/>
+		 <constructor-arg value="true" />
+	</bean>
+	
+	<bean id="sdtformat" class="java.text.SimpleDateFormat" >
+	  <constructor-arg value="dd-MM-yyyy" />
+	</bean>
+ 
+	<bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+		<property name="customEditors">
+			<map>
+				<entry key="java.util.Date">
+					<ref bean="dtEditor" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+	       
+</beans>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+      
+	  <bean id="comp" class="springCore.pNameSpace.Company" p:name="ABCD Ltd" p:location="India"/>
+	  <bean id="emp" class="springCore.pNameSpace.Employee" p:empName="Ram Jethmalani" p:company-ref="comp"/>
+</beans>
