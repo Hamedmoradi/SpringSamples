@@ -2,6 +2,6 @@ package springCore.lazyInit;
 
 public class B {
     public B() {
-        System.out.println("Bean A is initialized");
+        System.out.println("Bean B is initialized");
     }
 }

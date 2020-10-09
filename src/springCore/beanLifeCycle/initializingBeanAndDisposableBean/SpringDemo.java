@@ -1,4 +1,4 @@
-package springCore.beanLifeCycle.initializingBeanandDisposableBean;
+package springCore.beanLifeCycle.initializingBeanAndDisposableBean;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class SpringDemo {

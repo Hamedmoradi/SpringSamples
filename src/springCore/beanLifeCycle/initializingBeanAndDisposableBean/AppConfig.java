@@ -1,4 +1,4 @@
-package springCore.beanLifeCycle.initializingBeanandDisposableBean;
+package springCore.beanLifeCycle.initializingBeanAndDisposableBean;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
  * method of spring context.
  **/
 @Configuration
-@ComponentScan(basePackages = "springCore.beanLifeCycle.initializingBeanandDisposableBean")
+@ComponentScan(basePackages = "springCore.beanLifeCycle.initializingBeanAndDisposableBean")
 public class AppConfig {
 @Bean(name = "myBook")
 public Book getBean() {

@@ -1,0 +1,17 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="holyCityOfShiva" class="springCore.idref.City">
+		<property name="cityName" value="Varanasi" />
+		<property name="country" value="India" />
+	</bean>
+	<bean id="student" class="springCore.idref.Student">
+	    <property name="name" value="Mahesh" />
+		<property name="locationId">
+			<idref bean="holyCityOfShiva" />
+		</property>
+		<property name="city" ref="holyCityOfShiva" />		
+	</bean>
+</beans>

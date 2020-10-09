@@ -23,7 +23,7 @@ public static void main(String[] args) {
 	ApplicationContext context =
             new ClassPathXmlApplicationContext("springCore/lazyInit/lazyInitBeans.xml");
 	System.out.println("Feth springCore.applicationContextAware.bean B.");
-//        context.getBean("testInitA"); // the result change and Bean B not initialized ...
-	context.getBean("testInitB");
+//        context.getBean("testA"); // the result change and Bean B not initialized ...
+	context.getBean("testB");
 }
 }
